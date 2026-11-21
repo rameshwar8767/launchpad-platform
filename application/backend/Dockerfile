@@ -39,8 +39,9 @@ ENV PATH="/home/appuser/.local/bin:$PATH" \
     PYTHONDONTWRITEBYTECODE=1 \
     PORT=8000
 
-# Fix file permissions
-RUN chown -R appuser:appgroup /app /home/appuser
+# Fix file permissions and ensure entrypoint is executable
+RUN chown -R appuser:appgroup /app /home/appuser && \
+    chmod +x /app/entrypoint.sh
 
 # Switch to unprivileged non-root user
 USER 10001
@@ -50,6 +51,8 @@ EXPOSE 8000
 # Health check probe
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
     CMD curl -f http://localhost:8000/health/live || exit 1
+
+ENTRYPOINT ["/app/entrypoint.sh"]
 
 # Start Uvicorn production server
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
