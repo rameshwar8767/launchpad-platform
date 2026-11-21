@@ -1,6 +1,8 @@
 from typing import Any, Dict, Generic, List, Optional, Type, TypeVar, Union
+
 from sqlalchemy import select
 from sqlalchemy.orm import Session
+
 from app.db.base import Base
 
 ModelType = TypeVar("ModelType", bound=Base)

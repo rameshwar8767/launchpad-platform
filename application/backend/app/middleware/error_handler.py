@@ -1,8 +1,10 @@
 import traceback
 from datetime import datetime, timezone
+
 from fastapi import FastAPI, Request, status
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
+
 from app.core.logging import logger
 from app.services.exceptions import AppException
 

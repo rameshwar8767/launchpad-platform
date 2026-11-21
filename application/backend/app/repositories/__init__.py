@@ -1,7 +1,7 @@
 from app.repositories.base import BaseRepository
-from app.repositories.user_repo import user_repo, UserRepository
-from app.repositories.task_repo import task_repo, TaskRepository
-from app.repositories.token_repo import token_repo, TokenRepository
+from app.repositories.task_repo import TaskRepository, task_repo
+from app.repositories.token_repo import TokenRepository, token_repo
+from app.repositories.user_repo import UserRepository, user_repo
 
 __all__ = [
     "BaseRepository",

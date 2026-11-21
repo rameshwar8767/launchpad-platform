@@ -1,5 +1,5 @@
 import React from 'react'
-import { useAuth } from '../context/AuthContext'
+import { useAuth } from '../context/useAuth'
 import { Card } from '../components/ui/Card'
 import { Badge } from '../components/ui/Badge'
 import { User, Shield, Mail, Key } from 'lucide-react'

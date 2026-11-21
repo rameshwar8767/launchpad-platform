@@ -1,14 +1,14 @@
+from app.services.auth_service import AuthService, auth_service
+from app.services.dashboard_service import DashboardService, dashboard_service
 from app.services.exceptions import (
     AppException,
-    EntityNotFoundException,
-    PermissionDeniedException,
     DuplicateResourceException,
+    EntityNotFoundException,
     InvalidCredentialsException,
+    PermissionDeniedException,
     TokenValidationException,
 )
-from app.services.auth_service import auth_service, AuthService
-from app.services.task_service import task_service, TaskService
-from app.services.dashboard_service import dashboard_service, DashboardService
+from app.services.task_service import TaskService, task_service
 
 __all__ = [
     "AppException",

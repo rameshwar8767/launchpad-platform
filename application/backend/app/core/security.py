@@ -2,8 +2,10 @@ import hashlib
 import secrets
 from datetime import datetime, timedelta, timezone
 from typing import Any, Dict, Optional, Tuple
+
 import bcrypt
 import jwt
+
 from app.core.config import settings
 
 

@@ -1,3 +1,9 @@
+from app.schemas.auth import (
+    AccessTokenResponse,
+    LoginRequest,
+    RefreshTokenRequest,
+    TokenResponse,
+)
 from app.schemas.common import (
     APIResponse,
     ErrorDetail,
@@ -5,13 +11,7 @@ from app.schemas.common import (
     PaginatedResponse,
     PaginationMeta,
 )
-from app.schemas.user import UserCreate, UserResponse, UserRole, UserUpdate
-from app.schemas.auth import (
-    AccessTokenResponse,
-    LoginRequest,
-    RefreshTokenRequest,
-    TokenResponse,
-)
+from app.schemas.dashboard import DashboardMetricsResponse, DashboardStats
 from app.schemas.task import (
     TaskCreate,
     TaskPriority,
@@ -21,7 +21,7 @@ from app.schemas.task import (
     TaskStatusUpdate,
     TaskUpdate,
 )
-from app.schemas.dashboard import DashboardMetricsResponse, DashboardStats
+from app.schemas.user import UserCreate, UserResponse, UserRole, UserUpdate
 
 __all__ = [
     "APIResponse",

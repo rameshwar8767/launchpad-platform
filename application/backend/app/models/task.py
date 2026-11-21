@@ -1,7 +1,9 @@
 from datetime import datetime
-from typing import Optional, TYPE_CHECKING
-from sqlalchemy import BigInteger, ForeignKey, Integer, String, Text, DateTime
+from typing import TYPE_CHECKING, Optional
+
+from sqlalchemy import BigInteger, DateTime, ForeignKey, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
+
 from app.db.base import Base
 from app.models.base import TimestampMixin
 

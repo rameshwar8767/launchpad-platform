@@ -1,5 +1,7 @@
 from datetime import datetime, timezone
+
 from sqlalchemy.orm import Session
+
 from app.core.config import settings
 from app.core.security import (
     create_access_token,
@@ -8,9 +10,8 @@ from app.core.security import (
     hash_token,
     verify_password,
 )
-from app.models.user import User
-from app.repositories.user_repo import user_repo
 from app.repositories.token_repo import token_repo
+from app.repositories.user_repo import user_repo
 from app.schemas.auth import AccessTokenResponse, LoginRequest, TokenResponse
 from app.schemas.user import UserCreate, UserResponse
 from app.services.exceptions import (

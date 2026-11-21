@@ -1,6 +1,8 @@
 from typing import Optional
+
 from fastapi import APIRouter, Depends, Query, status
 from sqlalchemy.orm import Session
+
 from app.api.deps import get_current_user
 from app.db.session import get_db
 from app.models.user import User
